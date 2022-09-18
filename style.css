@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Spline+Sans+Mono:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+/* config */
+:root {
+    --dark: #0E1428;
+    --yellow: #F0A202;
+    --flame: #D95D39;
+    --lavender: #e2dadd;
+    --dark-lavender: #c7c1c3;
+    --white: #FFFCF9;
+    --blue: #2084ec;
+    --border-color: #eeeff1;
+    --darker-border-color: #d8d8d8;
+    --green: #1ac556;
+    
+    --average-transition: cubic-bezier(0, 0, 0.71, 0.27);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Spline sans', system-ui, sans-serif;
+}
+
+html {
+    height: 100%
+}
+
+body {
+    min-height: 100%;
+    
+    display: flex;
+
+    background-color: var(--white);
+}
+
+input, label, button{
+    margin: 0;
+    padding: 0;
+    border: none;
+    box-sizing: border-box;
+    appearance: none;
+    width: 150px;
+
+    font-family: inherit;
+    font-size: 100%;
+}
+
+/* Left Panel */
+.image-container {
+    height: 100vh;
+    width: 47.5%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-box {
+    height: max(90%, 600px);
+    width: max(85%, 400px);
+
+    background-color: var(--yellow);
+    border: 1px solid var(--yellow);
+    border-radius: 35px;
+    box-shadow: 10px 10px 15px var(--lavender);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.illustration {
+    width: 70%;
+    height: auto;
+}
+
+.box-title{
+    margin: 32px 0 32px 0;
+    font-size: 3rem;
+    color: var(--dark);
+    transition: 0.7s var(--average-transition);
+}
+
+.box-title:hover{
+    text-shadow: 2.5px 2.5px 8px var(--flame);
+}
+
+.box-p{
+    font-size: 2rem;
+    font-weight: 500;
+    color: var(--dark);
+
+    margin: 5px 0 0 0;
+}
+
+.p2 {
+    margin: 0 32px 0 132px;
+}
+
+.p3{
+    margin: 32px 0 0;
+    font-weight: 450;
+    font-size: 1.5rem;
+}
+
+.box-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    height: 200px;
+}
+
+.p3 span{
+  animation-duration: 0.7s;
+  animation-name: changeColor;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes changeColor {
+  from {
+    color: var(--dark);
+  }
+
+  to {
+    color: var(--blue);
+  }
+}
+
+.credit {
+    height: 32%;
+    width: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.credit a{
+    color: var(--dark);
+    text-decoration: none;
+
+    transition: 0.7s var(--average-transition);
+}
+
+.credit a:hover{
+    color: var(--blue);
+}
+
+/* Right Panel */
+.first-name, .last-name, .email, .phone-number, .password, .password2{
+    display: flex;
+    flex-direction: column;
+
+    margin-left: 50px;
+    margin: 0 50px 25px 0;
+}
+
+.first-n-lastname, .email-n-phonenumber, .passwords{
+    display: flex;
+}
+
+.side-panel{
+    width: calc(100% - 47.5%)
+}
+.header{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    height: 275px;
+    margin-bottom: 32px;
+}
+
+.header h2 {
+    font-size: 2.25rem;
+    margin: 0 0 16px 0;
+}
+
+.header p a{
+    text-decoration: none;
+    color: var(--blue);
+}
+
+label {
+    font-size: 1.2rem;
+
+    width: 250px;
+    margin-bottom: 4px;
+}
+
+input, input:optional {
+    border: 1px solid var(--border-color);
+    border: 5px;
+    box-shadow: 2.5px 2.5px 10px var(--lavender);
+    border-radius: 6.5px;
+
+    height: 32px;
+    width: 250px;
+}
+
+input:invalid, input:out-of-range, input:optional:invalid{
+    border: 2px solid var(--flame);
+}
+
+input:required:valid, input:optional:valid{
+    border: 2px solid var(--green);
+}
+
+button {
+    width: 150px;
+    height: 45px;
+
+    border: 1px solid var(--blue);
+    border-radius: 5px;
+    background-color: var(--blue);
+    box-shadow: 5px 5px 10px var(--lavender);
+
+    color: var(--white);
+    margin-top: 32px;
+
+    transition: 0.1s var(--average-transition);
+}
+
+button:hover {
+    box-shadow: 6.5px 6.5px 12.5px var(--dark-lavender);
+}
