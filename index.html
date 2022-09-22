@@ -21,22 +21,22 @@
                 <div class="first-n-lastname">
                     <div class="first-name">
                         <label for="firstname">First Name</label>
-                        <input type="text" id="firstname" name="firstname" placeholder="First Name" required minlength="3" maxlength="20">
+                        <input type="text" id="firstname" name="firstname" placeholder="First Name" required minlength="3" maxlength="20" pattern="^[A-Za-z]+$" title="Only text allowed, no symbols and no numbers. Please try again.">
                     </div>
                     <div class="last-name">
                         <label for="firstname">Last Name</label>
-                        <input type="text" id="lastname" name="lastname" placeholder=" Name" required minlength="3" maxlength="20">
+                        <input type="text" id="lastname" name="lastname" placeholder=" Name" required minlength="3" maxlength="20" pattern="^[A-Za-z]+$" title="Only text allowed, no symbols and no numbers. Please try again.">
                     </div>
                 </div>
 
                 <div class="email-n-phonenumber">
                     <div class="email">
                         <label for="email">Email</label>
-                        <input type="email" id="email" name="email" placeholder="Email" required minlength="5" maxlength="20">
+                        <input type="email" id="email" name="email" placeholder="Email" required minlength="5" maxlength="20" title="Email format only. Example: example@example.example">
                     </div>
                     <div class="phone-number">
                         <label for="phonenumber">Phone Number</label>
-                        <input type="tel" id="phonenumber" name="phonenumber" pattern='^[0-9]*$' min='7' max='13' title='Only numbers allowed, please try again' placeholder="Phone Number" required>
+                        <input type="tel" id="phonenumber" name="phonenumber" pattern='^[0-9]*$' minlength='7' maxlength='13' title='Only numbers allowed, please try again.' placeholder="Phone Number" required pattern="^[0-9]+$">
                     </div>
                 </div>
 
