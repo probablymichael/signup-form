@@ -55,6 +55,15 @@ input, label, button{
     display: flex;
     justify-content: center;
     align-items: center;
+
+    margin-right: 50px;
+}
+
+.image-container img {
+    width: 95%;
+    height: 95%;
+
+    border-radius: 25px
 }
 
 .image-box {
