@@ -60,13 +60,65 @@ input, label, button{
 }
 
 .image-container img {
-    width: 95%;
-    height: 95%;
+    height: max(95%, 600px);
+    width: max(95%, 400px);
 
-    border-radius: 25px
+    border-radius: 25px;
+
+    position: relative;
+    z-index: -1;
 }
 
-.image-box {
+.image-container .credit{
+    position: absolute;
+
+    color: var(--white);
+
+    height: 90%;
+    display: flex;
+    align-items: flex-end;
+}
+
+.image-container .credit a {
+    text-decoration: none;
+    color: var(--white);
+
+    transition: 0.09s var(--average-transition);
+}
+
+.image-container .credit a:hover {
+    color: var(--blue);
+
+    transform: translateY(-1.5px)
+}
+
+.image-container .title{
+    position: absolute;
+
+    height: 85%;
+    width: 844px;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+    color: var(--white);
+}
+
+.image-container .title h1 {
+    font-size: 55px;
+
+    background-color: rgba(14, 20, 40, 0.5);
+
+    width: 100%;
+    height: 100px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* .image-box {
     height: max(90%, 600px);
     width: max(85%, 400px);
 
@@ -127,9 +179,9 @@ input, label, button{
   animation-name: changeColor;
   animation-iteration-count: infinite;
   animation-direction: alternate;
-}
+} */
 
-@keyframes changeColor {
+/* @keyframes changeColor {
   from {
     color: var(--dark);
   }
@@ -137,17 +189,17 @@ input, label, button{
   to {
     color: var(--blue);
   }
-}
+} */
 
-.credit {
+/* .credit {
     height: 32%;
     width: 400px;
     display: flex;
     align-items: center;
     justify-content: center;
-}
+} */
 
-.credit a{
+/* .credit a{
     color: var(--dark);
     text-decoration: none;
 
@@ -156,7 +208,7 @@ input, label, button{
 
 .credit a:hover{
     color: var(--blue);
-}
+} */
 
 /* Right Panel */
 .first-name, .last-name, .email, .phone-number, .password, .password2{
@@ -174,6 +226,7 @@ input, label, button{
 .side-panel{
     width: calc(100% - 47.5%)
 }
+
 .header{
     display: flex;
     flex-direction: column;
@@ -235,4 +288,8 @@ button {
 
 button:hover {
     box-shadow: 6.5px 6.5px 12.5px var(--dark-lavender);
+
+    transform: scale(1.05, 1.05);
+
+    background-color: #187fee;
 }
